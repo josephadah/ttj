@@ -6,7 +6,7 @@ Please refactor this application to be efficient and easier to maintain
 (requirements to this application might change on a daily basis!).
 
 Use this command to run the app 
- ```$xslt
+```
  node src/app.js 35 customer-one private 1180
 ```
 
