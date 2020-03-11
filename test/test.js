@@ -2,8 +2,13 @@ import fs from 'fs';
 import assert from 'assert';
 import { execSync } from 'child_process';
 
-fs.unlinkSync('log/main.log');
-fs.unlinkSync('order-log/order.log');
+if (fs.existsSync('log/main.log')) {
+    fs.unlinkSync('log/main.log');
+}
+
+if (fs.existsSync('order-log/order.log')) {
+    fs.unlinkSync('order-log/order.log');
+}
 
 const command = 'node src/app.js 35 customer-one private 1180';
 execSync(command, { uid: 1000 });
